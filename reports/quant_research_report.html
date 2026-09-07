@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        A-Share Multi-Factor Research Report
+    </title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #eef2f6;
+            color: #1d2939;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+            line-height: 1.6;
+        }
+
+        .report {
+            max-width: 1180px;
+            margin: 30px auto;
+            background: white;
+            padding: 45px 55px;
+            box-shadow:
+                0 6px 24px
+                rgba(15, 35, 60, 0.12);
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            color: #17365d;
+            font-size: 34px;
+        }
+
+        h2 {
+            margin-top: 42px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #d7e2ee;
+            color: #1f4e79;
+        }
+
+        h3 {
+            color: #344f6e;
+        }
+
+        .subtitle {
+            color: #667085;
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(4, 1fr);
+            gap: 16px;
+            margin: 25px 0;
+        }
+
+        .card {
+            background: #f4f7fb;
+            border-left: 5px solid #1f4e79;
+            border-radius: 6px;
+            padding: 18px;
+        }
+
+        .card-label {
+            color: #667085;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        .card-value {
+            color: #17365d;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 4px;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0 28px 0;
+            font-size: 14px;
+        }
+
+        .data-table th {
+            background: #1f4e79;
+            color: white;
+            padding: 11px 8px;
+            text-align: center;
+        }
+
+        .data-table td {
+            border-bottom: 1px solid #d9e2ec;
+            padding: 10px 8px;
+            text-align: center;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #f7f9fc;
+        }
+
+        .chart {
+            width: 100%;
+            margin: 20px 0;
+            border: 1px solid #d7e2ee;
+        }
+
+        .conclusion {
+            background: #f0f6ff;
+            border-left: 5px solid #2f6fad;
+            padding: 20px 24px;
+            margin: 22px 0;
+        }
+
+        .warning {
+            background: #fff7e6;
+            border-left: 5px solid #e59f23;
+            padding: 18px 22px;
+        }
+
+        .footer {
+            margin-top: 45px;
+            padding-top: 15px;
+            border-top: 1px solid #d7e2ee;
+            color: #667085;
+            font-size: 12px;
+        }
+
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .report {
+                margin: 0;
+                max-width: none;
+                box-shadow: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="report">
+
+    <h1>
+        A-Share Multi-Factor Quantitative Research
+    </h1>
+
+    <div class="subtitle">
+        Out-of-sample factor validation,
+        portfolio backtesting and risk analysis
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-label">
+                Trained factor return
+            </div>
+            <div class="card-value">
+                7.53%
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-label">
+                CSI 300 return
+            </div>
+            <div class="card-value">
+                16.40%
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-label">
+                Sharpe ratio
+            </div>
+            <div class="card-value">
+                0.20
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-label">
+                Maximum drawdown
+            </div>
+            <div class="card-value">
+                -21.34%
+            </div>
+        </div>
+
+    </div>
+
+    <h2>Executive Summary</h2>
+
+    <div class="conclusion">
+
+        <p>
+            The trained multi-factor model returned
+            <strong>7.53%</strong>
+            during the true out-of-sample period.
+            The original model returned
+            <strong>-1.08%</strong>,
+            while the CSI 300 returned
+            <strong>16.40%</strong>.
+        </p>
+
+        <p>
+            Training improved the original strategy by
+            <strong>8.61 percentage points</strong>.
+            However, the trained model produced an
+            excess return of
+            <strong>-8.87 percentage points</strong>
+            relative to the benchmark.
+        </p>
+
+        <p>
+            Training improved performance relative to the original model.
+            The trained factor model underperformed the CSI 300.
+        </p>
+
+    </div>
+
+    <h2>Research Methodology</h2>
+
+    <ul>
+        <li>
+            Twelve selected A-share companies
+            and the CSI 300 benchmark.
+        </li>
+
+        <li>
+            Six price- and volume-based factors.
+        </li>
+
+        <li>
+            Cross-sectional winsorisation
+            and Z-score standardisation.
+        </li>
+
+        <li>
+            Monthly selection of the top five stocks.
+        </li>
+
+        <li>
+            Equal weighting with a 20% stock limit.
+        </li>
+
+        <li>
+            Transaction commission,
+            stamp duty and slippage included.
+        </li>
+
+        <li>
+            Chronological 70% training
+            and 30% testing split.
+        </li>
+
+        <li>
+            Factor weights frozen before
+            the out-of-sample backtest.
+        </li>
+    </ul>
+
+    <h2>True Out-of-Sample Performance</h2>
+
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Method</th>
+      <th>Final Value</th>
+      <th>Total Return (%)</th>
+      <th>Annual Return (%)</th>
+      <th>Annual Volatility (%)</th>
+      <th>Sharpe Ratio</th>
+      <th>Maximum Drawdown (%)</th>
+      <th>Cost (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Trained Factor</td>
+      <td>107530.82</td>
+      <td>7.53</td>
+      <td>4.15</td>
+      <td>18.87</td>
+      <td>0.20</td>
+      <td>-21.34</td>
+      <td>1.46</td>
+    </tr>
+    <tr>
+      <td>Original Factor</td>
+      <td>98920.29</td>
+      <td>-1.08</td>
+      <td>-0.61</td>
+      <td>16.60</td>
+      <td>-0.07</td>
+      <td>-20.95</td>
+      <td>1.28</td>
+    </tr>
+    <tr>
+      <td>CSI 300 Benchmark</td>
+      <td>116398.19</td>
+      <td>16.40</td>
+      <td>8.88</td>
+      <td>16.33</td>
+      <td>0.48</td>
+      <td>-13.42</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+
+    <img
+        class="chart"
+        src="charts/oos_backtest_report.png"
+        alt="Out-of-sample backtest charts"
+    >
+
+    <h2>Factor Validation</h2>
+
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Period</th>
+      <th>Months</th>
+      <th>Mean IC</th>
+      <th>IC Standard Deviation</th>
+      <th>IC IR</th>
+      <th>Positive IC Rate (%)</th>
+      <th>t-Statistic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Testing</td>
+      <td>21</td>
+      <td>0.03</td>
+      <td>0.39</td>
+      <td>0.08</td>
+      <td>61.90</td>
+      <td>0.37</td>
+    </tr>
+    <tr>
+      <td>Training</td>
+      <td>48</td>
+      <td>0.09</td>
+      <td>0.35</td>
+      <td>0.26</td>
+      <td>54.17</td>
+      <td>1.80</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h3>Trained Factor Weights</h3>
+
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Factor</th>
+      <th>Training Mean IC</th>
+      <th>Testing Mean IC</th>
+      <th>Direction</th>
+      <th>Weight (%)</th>
+      <th>Stable Direction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>20-Day Momentum</td>
+      <td>0.03</td>
+      <td>-0.03</td>
+      <td>1</td>
+      <td>15.63</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>60-Day Momentum</td>
+      <td>-0.04</td>
+      <td>-0.18</td>
+      <td>-1</td>
+      <td>17.45</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>5-Day Reversal</td>
+      <td>-0.04</td>
+      <td>0.04</td>
+      <td>-1</td>
+      <td>20.32</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Low Volatility</td>
+      <td>-0.07</td>
+      <td>0.11</td>
+      <td>-1</td>
+      <td>31.53</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>MA Trend</td>
+      <td>-0.03</td>
+      <td>-0.16</td>
+      <td>-1</td>
+      <td>12.96</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Volume Ratio</td>
+      <td>0.00</td>
+      <td>-0.00</td>
+      <td>1</td>
+      <td>2.10</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Out-of-Sample Risk Analysis</h2>
+
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Method</th>
+      <th>95% VaR (%)</th>
+      <th>95% CVaR (%)</th>
+      <th>Worst Day (%)</th>
+      <th>Maximum Drawdown (%)</th>
+      <th>Maximum Loss Streak</th>
+      <th>Monthly Win Rate (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Trained Factor</td>
+      <td>1.75</td>
+      <td>2.47</td>
+      <td>-5.17</td>
+      <td>-21.34</td>
+      <td>10</td>
+      <td>52.17</td>
+    </tr>
+    <tr>
+      <td>Original Factor</td>
+      <td>1.41</td>
+      <td>2.26</td>
+      <td>-6.32</td>
+      <td>-20.95</td>
+      <td>10</td>
+      <td>43.48</td>
+    </tr>
+    <tr>
+      <td>CSI 300 Benchmark</td>
+      <td>1.71</td>
+      <td>2.55</td>
+      <td>-7.05</td>
+      <td>-13.42</td>
+      <td>5</td>
+      <td>60.87</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h3>Portfolio Turnover</h3>
+
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Method</th>
+      <th>Rebalances</th>
+      <th>Total Turnover (%)</th>
+      <th>Average Monthly Turnover (%)</th>
+      <th>Annualised Turnover (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Original Factor</td>
+      <td>21</td>
+      <td>920.0</td>
+      <td>43.81</td>
+      <td>525.71</td>
+    </tr>
+    <tr>
+      <td>Trained Factor</td>
+      <td>21</td>
+      <td>1040.0</td>
+      <td>49.52</td>
+      <td>594.29</td>
+    </tr>
+    <tr>
+      <td>CSI 300 Benchmark</td>
+      <td>0</td>
+      <td>0.0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Latest Factor Ranking</h2>
+
+    <p>
+        Latest available ranking date:
+        <strong>2026-09-04</strong>
+    </p>
+
+    <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Rank</th>
+      <th>Symbol</th>
+      <th>Company</th>
+      <th>Composite Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>000001.SZ</td>
+      <td>Ping An Bank</td>
+      <td>0.60</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>600036.SS</td>
+      <td>China Merchants Bank</td>
+      <td>0.54</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>000333.SZ</td>
+      <td>Midea Group</td>
+      <td>0.39</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>000651.SZ</td>
+      <td>Gree Electric</td>
+      <td>0.33</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>600900.SS</td>
+      <td>Yangtze Power</td>
+      <td>0.26</td>
+    </tr>
+  </tbody>
+</table>
+
+    <h2>Research Conclusion</h2>
+
+    <div class="warning">
+
+        <p>
+            The trained factor specification improved
+            upon the original model but did not
+            outperform the CSI 300 during the
+            out-of-sample period.
+        </p>
+
+        <p>
+            Its lower Sharpe ratio, larger drawdown
+            and high annualised turnover indicate
+            that the current factor signal is not
+            sufficiently strong for live deployment.
+        </p>
+
+        <p>
+            The strategy should be treated as a
+            quantitative research prototype.
+            Future work should expand the stock
+            universe, include fundamental factors,
+            neutralise sector exposure and apply
+            walk-forward validation.
+        </p>
+
+    </div>
+
+    <h2>Limitations</h2>
+
+    <ul>
+        <li>
+            Small stock universe and possible
+            survivorship bias.
+        </li>
+
+        <li>
+            Simplified transaction cost assumptions.
+        </li>
+
+        <li>
+            No detailed suspension or price-limit model.
+        </li>
+
+        <li>
+            No sector-neutral portfolio construction.
+        </li>
+
+        <li>
+            Limited number of out-of-sample months.
+        </li>
+
+        <li>
+            Results do not guarantee future returns.
+        </li>
+    </ul>
+
+    <div class="footer">
+
+        Generated automatically by the
+        A-Share Multi-Factor Quantitative
+        Research System.
+
+        <br>
+
+        For educational and research purposes only.
+        This report does not constitute financial advice.
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
