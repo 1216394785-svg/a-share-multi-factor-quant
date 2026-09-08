@@ -112,29 +112,98 @@ def create_daily_prices_table(connection):
 
 
 def load_latest_universe(connection):
-    query = """
-        SELECT DISTINCT
-            baostock_code,
-            symbol,
-            stock_name
-        FROM stock_universe_v2
-        WHERE snapshot_date = (
-            SELECT MAX(snapshot_date)
-            FROM stock_universe_v2
-        )
-        ORDER BY baostock_code;
+    """
+    Load the full historical CSI 300 research universe.
+
+    If historical snapshots are unavailable, fall back to
+    the latest current-universe table.
     """
 
-    universe = pd.read_sql_query(query, connection)
+    history_table_exists = connection.execute(
+        """
+        SELECT COUNT(*)
+        FROM sqlite_master
+        WHERE type = 'table'
+          AND name = 'index_constituents_history';
+        """
+    ).fetchone()[0]
+
+    if history_table_exists:
+        history_row_count = connection.execute(
+            """
+            SELECT COUNT(*)
+            FROM index_constituents_history
+            WHERE index_code = '000300';
+            """
+        ).fetchone()[0]
+    else:
+        history_row_count = 0
+
+    if history_row_count > 0:
+        query = """
+            WITH latest_stock_names AS (
+                SELECT
+                    baostock_code,
+                    symbol,
+                    stock_name,
+                    ROW_NUMBER() OVER (
+                        PARTITION BY baostock_code
+                        ORDER BY query_date DESC
+                    ) AS row_number
+                FROM index_constituents_history
+                WHERE index_code = '000300'
+            )
+            SELECT
+                baostock_code,
+                symbol,
+                stock_name
+            FROM latest_stock_names
+            WHERE row_number = 1
+            ORDER BY baostock_code;
+        """
+
+        universe_source = (
+            "historical CSI 300 constituent union"
+        )
+
+    else:
+        query = """
+            SELECT DISTINCT
+                baostock_code,
+                symbol,
+                stock_name
+            FROM stock_universe_v2
+            WHERE snapshot_date = (
+                SELECT MAX(snapshot_date)
+                FROM stock_universe_v2
+            )
+            ORDER BY baostock_code;
+        """
+
+        universe_source = "latest CSI 300 snapshot"
+
+    universe = pd.read_sql_query(
+        query,
+        connection,
+    )
 
     if universe.empty:
         raise ValueError(
-            "The stock_universe_v2 table is empty. "
-            "Run: python -m src.universe"
+            "No stock-universe data is available. "
+            "Run: python -m src.historical_universe"
         )
 
-    return universe
+    print(
+        f"Research universe source: "
+        f"{universe_source}"
+    )
 
+    print(
+        f"Research universe stocks: "
+        f"{len(universe)}"
+    )
+
+    return universe
 
 def validate_dates(start_date, end_date):
     start_timestamp = pd.Timestamp(start_date)

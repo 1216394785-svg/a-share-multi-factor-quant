@@ -8,7 +8,7 @@ Non-positive prices,PASS,CRITICAL,0,Trading-day prices must be greater than zero
 Negative volume or turnover,PASS,CRITICAL,0,"Volume, amount and turnover cannot be negative."
 Invalid trading-status flags,PASS,CRITICAL,0,Trading status must equal zero or one.
 Invalid ST flags,PASS,CRITICAL,0,ST status must equal zero or one.
-Extreme daily returns above 25%,WARNING,WARNING,49,May include IPO observations or data anomalies.
+Extreme daily returns above 25%,WARNING,WARNING,76,May include IPO observations or data anomalies.
 Missing valuation indicators,PASS,WARNING,0,Missing values can occur for loss-making companies.
-Stocks with stale ending dates,PASS,WARNING,0,The last observation is over 10 days behind.
+Stocks with stale ending dates,WARNING,WARNING,11,The last observation is over 10 days behind.
 Stocks with less than one year of data,WARNING,WARNING,1,Usually caused by recent IPO listings.
