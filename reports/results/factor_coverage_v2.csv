@@ -1,0 +1,19 @@
+﻿factor_column,factor_name,category,direction,role,formula,non_missing_observations,total_observations,coverage_percent,first_valid_snapshot,last_valid_snapshot
+momentum_20,20-Day Momentum,Momentum,1,alpha,close / close.shift(20) - 1,26084,26084,100.000000,2019-07-31,2026-09-08
+momentum_60,60-Day Momentum,Momentum,1,alpha,close / close.shift(60) - 1,26084,26084,100.000000,2019-07-31,2026-09-08
+momentum_120,120-Day Momentum,Momentum,1,alpha,close / close.shift(120) - 1,26084,26084,100.000000,2019-07-31,2026-09-08
+momentum_12_1,12-1 Momentum,Momentum,1,alpha,close.shift(20) / close.shift(252) - 1,24132,26084,92.516485,2020-01-31,2026-09-08
+reversal_5_score,5-Day Reversal,Reversal,1,alpha,-(close / close.shift(5) - 1),26084,26084,100.000000,2019-07-31,2026-09-08
+volatility_20,20-Day Volatility,Risk,-1,alpha,"std(daily return, 20) * sqrt(252)",26084,26084,100.000000,2019-07-31,2026-09-08
+downside_volatility_60,60-Day Downside Volatility,Risk,-1,alpha,"std(min(daily return, 0), 60) * sqrt(252)",26084,26084,100.000000,2019-07-31,2026-09-08
+drawdown_60,60-Day Drawdown,Risk,1,alpha,"close / rolling_max(close, 60) - 1",26084,26084,100.000000,2019-07-31,2026-09-08
+trend_60,60-Day MA Trend,Trend,1,alpha,"close / rolling_mean(close, 60) - 1",26084,26084,100.000000,2019-07-31,2026-09-08
+liquidity_amount_20,20-Day Amount Liquidity,Liquidity,1,alpha,"log(1 + rolling_mean(amount, 20) / 1,000,000)",26084,26084,100.000000,2019-07-31,2026-09-08
+turnover_20,20-Day Turnover,Liquidity,1,alpha,"rolling_mean(turnover_rate, 20)",26084,26084,100.000000,2019-07-31,2026-09-08
+turnover_stability_20,Turnover Stability,Liquidity,1,alpha,"-rolling_std(turnover_rate, 20)",26084,26084,100.000000,2019-07-31,2026-09-08
+amihud_liquidity_score_20,Amihud Liquidity,Liquidity,1,alpha,"-log(1 + rolling_mean(abs(return)/(amount/1e8), 20))",26084,26084,100.000000,2019-07-31,2026-09-08
+value_pe_score,Earnings Yield Style,Value,1,alpha,-log(positive PE TTM),24656,26084,94.525380,2019-07-31,2026-09-08
+value_pb_score,Book-to-Price Style,Value,1,alpha,-log(positive PB MRQ),26084,26084,100.000000,2019-07-31,2026-09-08
+value_ps_score,Sales-to-Price Style,Value,1,alpha,-log(positive PS TTM),26071,26084,99.950161,2019-07-31,2026-09-08
+value_pcf_score,Cash-Flow Yield Style,Value,1,alpha,-log(positive PCF NCF TTM),15701,26084,60.193989,2019-07-31,2026-09-08
+log_float_market_cap,Log Float Market Capitalization,Size,0,neutralizer,"rolling_median(log(volume / turnover_fraction * close), 20)",26084,26084,100.000000,2019-07-31,2026-09-08
