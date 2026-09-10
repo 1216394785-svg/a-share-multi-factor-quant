@@ -1,0 +1,6 @@
+﻿component_column,component_name,average_weight,minimum_weight,maximum_weight,latest_weight,latest_snapshot_date
+turnover_stability_component,Turnover Stability,0.3083570080,0.2220064591,0.3500000000,0.3094295292,2026-09-08
+low_risk_component,Low Risk,0.2524947893,0.0879290347,0.3462281569,0.2248538926,2026-09-08
+short_reversal_component,Short Reversal,0.1346526275,0.0010063904,0.3016933664,0.2057727066,2026-09-08
+value_component,Value,0.1935749025,0.0254224375,0.2804518089,0.1773705903,2026-09-08
+long_momentum_component,12-1 Momentum,0.1109206727,0.0436341053,0.2958981192,0.0825732813,2026-09-08

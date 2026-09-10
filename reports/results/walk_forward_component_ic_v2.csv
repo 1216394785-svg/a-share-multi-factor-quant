@@ -1,0 +1,425 @@
+﻿snapshot_date,target_snapshot_date,component_column,component_name,number_of_stocks,rank_ic
+2019-07-31,2019-08-31,low_risk_component,Low Risk,300,-0.1586833363
+2019-07-31,2019-08-31,short_reversal_component,Short Reversal,300,-0.1138012771
+2019-07-31,2019-08-31,turnover_stability_component,Turnover Stability,300,-0.0905081268
+2019-07-31,2019-08-31,value_component,Value,300,-0.2701552540
+2019-08-31,2019-09-30,low_risk_component,Low Risk,300,-0.0242356322
+2019-08-31,2019-09-30,short_reversal_component,Short Reversal,300,0.1619264415
+2019-08-31,2019-09-30,turnover_stability_component,Turnover Stability,300,-0.0749002571
+2019-08-31,2019-09-30,value_component,Value,300,0.0665163759
+2019-09-30,2019-10-31,low_risk_component,Low Risk,300,0.0377513335
+2019-09-30,2019-10-31,short_reversal_component,Short Reversal,300,-0.0167950867
+2019-09-30,2019-10-31,turnover_stability_component,Turnover Stability,300,0.0729899708
+2019-09-30,2019-10-31,value_component,Value,300,-0.0383422294
+2019-10-31,2019-11-30,low_risk_component,Low Risk,300,0.0567093031
+2019-10-31,2019-11-30,short_reversal_component,Short Reversal,300,-0.0528914824
+2019-10-31,2019-11-30,turnover_stability_component,Turnover Stability,300,0.1084356613
+2019-10-31,2019-11-30,value_component,Value,300,0.1475509892
+2019-11-30,2019-12-31,low_risk_component,Low Risk,300,-0.0502823421
+2019-11-30,2019-12-31,short_reversal_component,Short Reversal,300,0.0438313808
+2019-11-30,2019-12-31,turnover_stability_component,Turnover Stability,300,-0.0597422260
+2019-11-30,2019-12-31,value_component,Value,300,0.0924050370
+2019-12-31,2020-01-31,low_risk_component,Low Risk,300,-0.0170410801
+2019-12-31,2020-01-31,short_reversal_component,Short Reversal,300,0.1097610095
+2019-12-31,2020-01-31,turnover_stability_component,Turnover Stability,300,0.0314259082
+2019-12-31,2020-01-31,value_component,Value,300,-0.0944503933
+2020-01-31,2020-02-29,long_momentum_component,12-1 Momentum,300,0.0464623095
+2020-01-31,2020-02-29,low_risk_component,Low Risk,300,-0.0450127324
+2020-01-31,2020-02-29,short_reversal_component,Short Reversal,300,0.0139410484
+2020-01-31,2020-02-29,turnover_stability_component,Turnover Stability,300,-0.1238607371
+2020-01-31,2020-02-29,value_component,Value,300,-0.0576159863
+2020-02-29,2020-03-31,long_momentum_component,12-1 Momentum,300,0.0289634329
+2020-02-29,2020-03-31,low_risk_component,Low Risk,300,0.1947057190
+2020-02-29,2020-03-31,short_reversal_component,Short Reversal,300,-0.1753512817
+2020-02-29,2020-03-31,turnover_stability_component,Turnover Stability,300,0.0857853976
+2020-02-29,2020-03-31,value_component,Value,300,0.0032804809
+2020-03-31,2020-04-30,long_momentum_component,12-1 Momentum,299,0.2806190493
+2020-03-31,2020-04-30,low_risk_component,Low Risk,299,-0.2571768987
+2020-03-31,2020-04-30,short_reversal_component,Short Reversal,299,-0.1054049246
+2020-03-31,2020-04-30,turnover_stability_component,Turnover Stability,299,-0.0562706479
+2020-03-31,2020-04-30,value_component,Value,299,-0.1902619450
+2020-04-30,2020-05-31,long_momentum_component,12-1 Momentum,299,0.0056734991
+2020-04-30,2020-05-31,low_risk_component,Low Risk,299,-0.0093838522
+2020-04-30,2020-05-31,short_reversal_component,Short Reversal,299,-0.1045278445
+2020-04-30,2020-05-31,turnover_stability_component,Turnover Stability,299,0.0280074521
+2020-04-30,2020-05-31,value_component,Value,299,-0.1603268165
+2020-05-31,2020-06-30,long_momentum_component,12-1 Momentum,299,0.1297462210
+2020-05-31,2020-06-30,low_risk_component,Low Risk,299,-0.0758192161
+2020-05-31,2020-06-30,short_reversal_component,Short Reversal,299,0.0196148367
+2020-05-31,2020-06-30,turnover_stability_component,Turnover Stability,299,0.0126500037
+2020-05-31,2020-06-30,value_component,Value,299,-0.0665058397
+2020-06-30,2020-07-31,long_momentum_component,12-1 Momentum,299,0.0303050437
+2020-06-30,2020-07-31,low_risk_component,Low Risk,299,-0.0146811519
+2020-06-30,2020-07-31,short_reversal_component,Short Reversal,299,-0.0325750300
+2020-06-30,2020-07-31,turnover_stability_component,Turnover Stability,299,0.0577769298
+2020-06-30,2020-07-31,value_component,Value,299,-0.0853623937
+2020-07-31,2020-08-31,long_momentum_component,12-1 Momentum,300,0.0023480271
+2020-07-31,2020-08-31,low_risk_component,Low Risk,300,0.1164417900
+2020-07-31,2020-08-31,short_reversal_component,Short Reversal,300,0.1132710867
+2020-07-31,2020-08-31,turnover_stability_component,Turnover Stability,300,0.1646512360
+2020-07-31,2020-08-31,value_component,Value,300,0.1086363665
+2020-08-31,2020-09-30,long_momentum_component,12-1 Momentum,300,0.0974850832
+2020-08-31,2020-09-30,low_risk_component,Low Risk,300,-0.0092578806
+2020-08-31,2020-09-30,short_reversal_component,Short Reversal,300,-0.0800671119
+2020-08-31,2020-09-30,turnover_stability_component,Turnover Stability,300,0.0425142502
+2020-08-31,2020-09-30,value_component,Value,300,-0.0462862921
+2020-09-30,2020-10-31,long_momentum_component,12-1 Momentum,300,-0.0752858927
+2020-09-30,2020-10-31,low_risk_component,Low Risk,300,0.0606674756
+2020-09-30,2020-10-31,short_reversal_component,Short Reversal,300,-0.0074218767
+2020-09-30,2020-10-31,turnover_stability_component,Turnover Stability,300,0.0461232919
+2020-09-30,2020-10-31,value_component,Value,300,0.0071298728
+2020-10-31,2020-11-30,long_momentum_component,12-1 Momentum,300,0.0110001234
+2020-10-31,2020-11-30,low_risk_component,Low Risk,300,0.0177893107
+2020-10-31,2020-11-30,short_reversal_component,Short Reversal,300,0.0202195602
+2020-10-31,2020-11-30,turnover_stability_component,Turnover Stability,300,0.0301107824
+2020-10-31,2020-11-30,value_component,Value,300,0.0522528086
+2020-11-30,2020-12-31,long_momentum_component,12-1 Momentum,300,0.2491807406
+2020-11-30,2020-12-31,low_risk_component,Low Risk,300,-0.0534557169
+2020-11-30,2020-12-31,short_reversal_component,Short Reversal,300,0.1064316507
+2020-11-30,2020-12-31,turnover_stability_component,Turnover Stability,300,0.0171733057
+2020-11-30,2020-12-31,value_component,Value,300,-0.3036456635
+2020-12-31,2021-01-31,long_momentum_component,12-1 Momentum,300,0.2171513017
+2020-12-31,2021-01-31,low_risk_component,Low Risk,300,-0.0365652952
+2020-12-31,2021-01-31,short_reversal_component,Short Reversal,300,-0.1191177680
+2020-12-31,2021-01-31,turnover_stability_component,Turnover Stability,300,-0.0987339969
+2020-12-31,2021-01-31,value_component,Value,300,-0.1574875276
+2021-01-31,2021-02-28,long_momentum_component,12-1 Momentum,300,-0.2589536670
+2021-01-31,2021-02-28,low_risk_component,Low Risk,300,0.1638717807
+2021-01-31,2021-02-28,short_reversal_component,Short Reversal,300,0.0429567568
+2021-01-31,2021-02-28,turnover_stability_component,Turnover Stability,300,-0.0315454967
+2021-01-31,2021-02-28,value_component,Value,300,0.3215145963
+2021-02-28,2021-03-31,long_momentum_component,12-1 Momentum,300,0.0015580175
+2021-02-28,2021-03-31,low_risk_component,Low Risk,300,0.1561839576
+2021-02-28,2021-03-31,short_reversal_component,Short Reversal,300,0.0709701219
+2021-02-28,2021-03-31,turnover_stability_component,Turnover Stability,300,0.1347517344
+2021-02-28,2021-03-31,value_component,Value,300,0.1819122435
+2021-03-31,2021-04-30,long_momentum_component,12-1 Momentum,300,0.2278168548
+2021-03-31,2021-04-30,low_risk_component,Low Risk,300,-0.1536048861
+2021-03-31,2021-04-30,short_reversal_component,Short Reversal,300,-0.1024387621
+2021-03-31,2021-04-30,turnover_stability_component,Turnover Stability,300,0.0250407338
+2021-03-31,2021-04-30,value_component,Value,300,-0.2322089055
+2021-04-30,2021-05-31,long_momentum_component,12-1 Momentum,300,0.0776260599
+2021-04-30,2021-05-31,low_risk_component,Low Risk,300,-0.1974717469
+2021-04-30,2021-05-31,short_reversal_component,Short Reversal,300,-0.0109385781
+2021-04-30,2021-05-31,turnover_stability_component,Turnover Stability,300,-0.1513347554
+2021-04-30,2021-05-31,value_component,Value,300,-0.1789615206
+2021-05-31,2021-06-30,long_momentum_component,12-1 Momentum,299,0.0107086261
+2021-05-31,2021-06-30,low_risk_component,Low Risk,299,-0.0196808152
+2021-05-31,2021-06-30,short_reversal_component,Short Reversal,299,-0.0435821916
+2021-05-31,2021-06-30,turnover_stability_component,Turnover Stability,299,0.0002639671
+2021-05-31,2021-06-30,value_component,Value,299,-0.1346887836
+2021-06-30,2021-07-31,long_momentum_component,12-1 Momentum,299,0.0069197115
+2021-06-30,2021-07-31,low_risk_component,Low Risk,299,0.0039990124
+2021-06-30,2021-07-31,short_reversal_component,Short Reversal,299,0.0256084039
+2021-06-30,2021-07-31,turnover_stability_component,Turnover Stability,299,0.0358259074
+2021-06-30,2021-07-31,value_component,Value,299,0.0253071760
+2021-07-31,2021-08-31,long_momentum_component,12-1 Momentum,300,0.0566415182
+2021-07-31,2021-08-31,low_risk_component,Low Risk,300,0.0678051978
+2021-07-31,2021-08-31,short_reversal_component,Short Reversal,300,0.0096332192
+2021-07-31,2021-08-31,turnover_stability_component,Turnover Stability,300,0.1027700308
+2021-07-31,2021-08-31,value_component,Value,300,0.1432749253
+2021-08-31,2021-09-30,long_momentum_component,12-1 Momentum,300,-0.1747279608
+2021-08-31,2021-09-30,low_risk_component,Low Risk,300,0.1067676426
+2021-08-31,2021-09-30,short_reversal_component,Short Reversal,300,0.0642909437
+2021-08-31,2021-09-30,turnover_stability_component,Turnover Stability,300,0.0334665978
+2021-08-31,2021-09-30,value_component,Value,300,0.1310954712
+2021-09-30,2021-10-31,long_momentum_component,12-1 Momentum,300,0.1765385041
+2021-09-30,2021-10-31,low_risk_component,Low Risk,300,-0.0808991571
+2021-09-30,2021-10-31,short_reversal_component,Short Reversal,300,0.0598335803
+2021-09-30,2021-10-31,turnover_stability_component,Turnover Stability,300,0.0693910241
+2021-09-30,2021-10-31,value_component,Value,300,-0.1172729107
+2021-10-31,2021-11-30,long_momentum_component,12-1 Momentum,300,-0.1196169378
+2021-10-31,2021-11-30,low_risk_component,Low Risk,300,0.0424413793
+2021-10-31,2021-11-30,short_reversal_component,Short Reversal,300,0.1168746839
+2021-10-31,2021-11-30,turnover_stability_component,Turnover Stability,300,-0.0456507497
+2021-10-31,2021-11-30,value_component,Value,300,0.0576131102
+2021-11-30,2021-12-31,long_momentum_component,12-1 Momentum,300,-0.2021024903
+2021-11-30,2021-12-31,low_risk_component,Low Risk,300,0.2010533674
+2021-11-30,2021-12-31,short_reversal_component,Short Reversal,300,0.1831182772
+2021-11-30,2021-12-31,turnover_stability_component,Turnover Stability,300,0.1013020370
+2021-11-30,2021-12-31,value_component,Value,300,0.2480756728
+2021-12-31,2022-01-31,long_momentum_component,12-1 Momentum,300,-0.0790364337
+2021-12-31,2022-01-31,low_risk_component,Low Risk,300,0.1879358660
+2021-12-31,2022-01-31,short_reversal_component,Short Reversal,300,-0.0512676808
+2021-12-31,2022-01-31,turnover_stability_component,Turnover Stability,300,0.1088052210
+2021-12-31,2022-01-31,value_component,Value,300,0.1716965744
+2022-01-31,2022-02-28,long_momentum_component,12-1 Momentum,298,0.2088992081
+2022-01-31,2022-02-28,low_risk_component,Low Risk,298,-0.2237846667
+2022-01-31,2022-02-28,short_reversal_component,Short Reversal,298,0.0102035148
+2022-01-31,2022-02-28,turnover_stability_component,Turnover Stability,298,-0.1614516956
+2022-01-31,2022-02-28,value_component,Value,298,-0.1230826890
+2022-02-28,2022-03-31,long_momentum_component,12-1 Momentum,299,0.0522843483
+2022-02-28,2022-03-31,low_risk_component,Low Risk,299,0.0705609302
+2022-02-28,2022-03-31,short_reversal_component,Short Reversal,299,0.0056672129
+2022-02-28,2022-03-31,turnover_stability_component,Turnover Stability,299,-0.0360880788
+2022-02-28,2022-03-31,value_component,Value,299,0.1048182981
+2022-03-31,2022-04-30,long_momentum_component,12-1 Momentum,300,-0.0384308757
+2022-03-31,2022-04-30,low_risk_component,Low Risk,300,0.1004602273
+2022-03-31,2022-04-30,short_reversal_component,Short Reversal,300,-0.0554855054
+2022-03-31,2022-04-30,turnover_stability_component,Turnover Stability,300,0.1059098552
+2022-03-31,2022-04-30,value_component,Value,300,0.0232669252
+2022-04-30,2022-05-31,long_momentum_component,12-1 Momentum,300,0.0347350526
+2022-04-30,2022-05-31,low_risk_component,Low Risk,300,-0.1183364260
+2022-04-30,2022-05-31,short_reversal_component,Short Reversal,300,-0.0538963826
+2022-04-30,2022-05-31,turnover_stability_component,Turnover Stability,300,0.0214993500
+2022-04-30,2022-05-31,value_component,Value,300,-0.1462314026
+2022-05-31,2022-06-30,long_momentum_component,12-1 Momentum,299,-0.0867594637
+2022-05-31,2022-06-30,low_risk_component,Low Risk,299,-0.1847904856
+2022-05-31,2022-06-30,short_reversal_component,Short Reversal,299,0.0214574332
+2022-05-31,2022-06-30,turnover_stability_component,Turnover Stability,299,-0.1170665212
+2022-05-31,2022-06-30,value_component,Value,299,-0.1374164595
+2022-06-30,2022-07-31,long_momentum_component,12-1 Momentum,298,0.1475256255
+2022-06-30,2022-07-31,low_risk_component,Low Risk,298,0.0380839211
+2022-06-30,2022-07-31,short_reversal_component,Short Reversal,298,0.2627062980
+2022-06-30,2022-07-31,turnover_stability_component,Turnover Stability,298,0.0747324199
+2022-06-30,2022-07-31,value_component,Value,298,0.0494435047
+2022-07-31,2022-08-31,long_momentum_component,12-1 Momentum,300,0.1020449229
+2022-07-31,2022-08-31,low_risk_component,Low Risk,300,0.1515130336
+2022-07-31,2022-08-31,short_reversal_component,Short Reversal,300,0.0181506481
+2022-07-31,2022-08-31,turnover_stability_component,Turnover Stability,300,0.0957004073
+2022-07-31,2022-08-31,value_component,Value,300,0.1019066992
+2022-08-31,2022-09-30,long_momentum_component,12-1 Momentum,300,0.0584404336
+2022-08-31,2022-09-30,low_risk_component,Low Risk,300,0.1384337758
+2022-08-31,2022-09-30,short_reversal_component,Short Reversal,300,-0.0934803928
+2022-08-31,2022-09-30,turnover_stability_component,Turnover Stability,300,0.0579393233
+2022-08-31,2022-09-30,value_component,Value,300,0.0091141023
+2022-09-30,2022-10-31,long_momentum_component,12-1 Momentum,300,-0.0675958997
+2022-09-30,2022-10-31,low_risk_component,Low Risk,300,0.0286403310
+2022-09-30,2022-10-31,short_reversal_component,Short Reversal,300,0.1301077257
+2022-09-30,2022-10-31,turnover_stability_component,Turnover Stability,300,0.0346070704
+2022-09-30,2022-10-31,value_component,Value,300,0.0237984972
+2022-10-31,2022-11-30,long_momentum_component,12-1 Momentum,300,-0.1568012978
+2022-10-31,2022-11-30,low_risk_component,Low Risk,300,-0.0065054056
+2022-10-31,2022-11-30,short_reversal_component,Short Reversal,300,0.1792851032
+2022-10-31,2022-11-30,turnover_stability_component,Turnover Stability,300,0.1266196291
+2022-10-31,2022-11-30,value_component,Value,300,0.1870607451
+2022-11-30,2022-12-31,long_momentum_component,12-1 Momentum,300,-0.1152817254
+2022-11-30,2022-12-31,low_risk_component,Low Risk,300,0.0362657363
+2022-11-30,2022-12-31,short_reversal_component,Short Reversal,300,-0.1021446905
+2022-11-30,2022-12-31,turnover_stability_component,Turnover Stability,300,-0.0063551817
+2022-11-30,2022-12-31,value_component,Value,300,0.0065494061
+2022-12-31,2023-01-31,long_momentum_component,12-1 Momentum,300,-0.2055339306
+2022-12-31,2023-01-31,low_risk_component,Low Risk,300,-0.0634202884
+2022-12-31,2023-01-31,short_reversal_component,Short Reversal,300,0.1705495264
+2022-12-31,2023-01-31,turnover_stability_component,Turnover Stability,300,-0.0235638278
+2022-12-31,2023-01-31,value_component,Value,300,0.1250285559
+2023-01-31,2023-02-28,long_momentum_component,12-1 Momentum,300,0.0410977900
+2023-01-31,2023-02-28,low_risk_component,Low Risk,300,0.3388615429
+2023-01-31,2023-02-28,short_reversal_component,Short Reversal,300,-0.0013306816
+2023-01-31,2023-02-28,turnover_stability_component,Turnover Stability,300,0.2986147176
+2023-01-31,2023-02-28,value_component,Value,300,0.2828391427
+2023-02-28,2023-03-31,long_momentum_component,12-1 Momentum,300,0.0035344841
+2023-02-28,2023-03-31,low_risk_component,Low Risk,300,0.2152828604
+2023-02-28,2023-03-31,short_reversal_component,Short Reversal,300,-0.0812771434
+2023-02-28,2023-03-31,turnover_stability_component,Turnover Stability,300,0.1494161212
+2023-02-28,2023-03-31,value_component,Value,300,0.2404558096
+2023-03-31,2023-04-30,long_momentum_component,12-1 Momentum,300,0.1698218869
+2023-03-31,2023-04-30,low_risk_component,Low Risk,300,0.0192486583
+2023-03-31,2023-04-30,short_reversal_component,Short Reversal,300,-0.0342230469
+2023-03-31,2023-04-30,turnover_stability_component,Turnover Stability,300,-0.0534503717
+2023-03-31,2023-04-30,value_component,Value,300,0.1281987578
+2023-04-30,2023-05-31,long_momentum_component,12-1 Momentum,300,0.1300659041
+2023-04-30,2023-05-31,low_risk_component,Low Risk,300,0.0627238150
+2023-04-30,2023-05-31,short_reversal_component,Short Reversal,300,-0.0403693419
+2023-04-30,2023-05-31,turnover_stability_component,Turnover Stability,300,0.0680994309
+2023-04-30,2023-05-31,value_component,Value,300,0.0935617166
+2023-05-31,2023-06-30,long_momentum_component,12-1 Momentum,300,0.0343068333
+2023-05-31,2023-06-30,low_risk_component,Low Risk,300,-0.0150855026
+2023-05-31,2023-06-30,short_reversal_component,Short Reversal,300,0.1165677526
+2023-05-31,2023-06-30,turnover_stability_component,Turnover Stability,300,-0.0016009069
+2023-05-31,2023-06-30,value_component,Value,300,0.0258938461
+2023-06-30,2023-07-31,long_momentum_component,12-1 Momentum,300,-0.0916854632
+2023-06-30,2023-07-31,low_risk_component,Low Risk,300,0.0732283692
+2023-06-30,2023-07-31,short_reversal_component,Short Reversal,300,0.1336428183
+2023-06-30,2023-07-31,turnover_stability_component,Turnover Stability,300,0.0205073390
+2023-06-30,2023-07-31,value_component,Value,300,0.1669840776
+2023-07-31,2023-08-31,long_momentum_component,12-1 Momentum,300,0.1953612818
+2023-07-31,2023-08-31,low_risk_component,Low Risk,300,0.1509741219
+2023-07-31,2023-08-31,short_reversal_component,Short Reversal,300,0.1041980466
+2023-07-31,2023-08-31,turnover_stability_component,Turnover Stability,300,0.1609293437
+2023-07-31,2023-08-31,value_component,Value,300,0.0146783853
+2023-08-31,2023-09-30,long_momentum_component,12-1 Momentum,300,0.1169986983
+2023-08-31,2023-09-30,low_risk_component,Low Risk,300,0.1018420770
+2023-08-31,2023-09-30,short_reversal_component,Short Reversal,300,-0.0795704839
+2023-08-31,2023-09-30,turnover_stability_component,Turnover Stability,300,-0.0196862297
+2023-08-31,2023-09-30,value_component,Value,300,0.1320257625
+2023-09-30,2023-10-31,long_momentum_component,12-1 Momentum,300,-0.0323363593
+2023-09-30,2023-10-31,low_risk_component,Low Risk,300,0.1040824898
+2023-09-30,2023-10-31,short_reversal_component,Short Reversal,300,0.0179713108
+2023-09-30,2023-10-31,turnover_stability_component,Turnover Stability,300,-0.0007573417
+2023-09-30,2023-10-31,value_component,Value,300,0.0191411016
+2023-10-31,2023-11-30,long_momentum_component,12-1 Momentum,300,0.1245294113
+2023-10-31,2023-11-30,low_risk_component,Low Risk,300,0.0494214435
+2023-10-31,2023-11-30,short_reversal_component,Short Reversal,300,-0.0195473305
+2023-10-31,2023-11-30,turnover_stability_component,Turnover Stability,300,0.0928021526
+2023-10-31,2023-11-30,value_component,Value,300,-0.0009688998
+2023-11-30,2023-12-31,long_momentum_component,12-1 Momentum,300,0.0073823092
+2023-11-30,2023-12-31,low_risk_component,Low Risk,300,0.0263316405
+2023-11-30,2023-12-31,short_reversal_component,Short Reversal,300,-0.0392073463
+2023-11-30,2023-12-31,turnover_stability_component,Turnover Stability,300,0.0414207101
+2023-11-30,2023-12-31,value_component,Value,300,0.0669787814
+2023-12-31,2024-01-31,long_momentum_component,12-1 Momentum,300,0.2306061178
+2023-12-31,2024-01-31,low_risk_component,Low Risk,300,0.1933197250
+2023-12-31,2024-01-31,short_reversal_component,Short Reversal,300,0.0938054867
+2023-12-31,2024-01-31,turnover_stability_component,Turnover Stability,300,0.0489365492
+2023-12-31,2024-01-31,value_component,Value,300,0.1386828743
+2024-01-31,2024-02-29,long_momentum_component,12-1 Momentum,300,-0.1066300974
+2024-01-31,2024-02-29,low_risk_component,Low Risk,300,-0.1992042355
+2024-01-31,2024-02-29,short_reversal_component,Short Reversal,300,0.2226651655
+2024-01-31,2024-02-29,turnover_stability_component,Turnover Stability,300,-0.1006862522
+2024-01-31,2024-02-29,value_component,Value,300,-0.0522730311
+2024-02-29,2024-03-31,long_momentum_component,12-1 Momentum,300,0.2144321604
+2024-02-29,2024-03-31,low_risk_component,Low Risk,300,0.1025753619
+2024-02-29,2024-03-31,short_reversal_component,Short Reversal,300,-0.0378901988
+2024-02-29,2024-03-31,turnover_stability_component,Turnover Stability,300,0.0831644796
+2024-02-29,2024-03-31,value_component,Value,300,0.0331030345
+2024-03-31,2024-04-30,long_momentum_component,12-1 Momentum,300,0.1284292904
+2024-03-31,2024-04-30,low_risk_component,Low Risk,300,0.1643868067
+2024-03-31,2024-04-30,short_reversal_component,Short Reversal,300,-0.1573102972
+2024-03-31,2024-04-30,turnover_stability_component,Turnover Stability,300,0.1889455377
+2024-03-31,2024-04-30,value_component,Value,300,-0.1107244029
+2024-04-30,2024-05-31,long_momentum_component,12-1 Momentum,300,-0.0963524146
+2024-04-30,2024-05-31,low_risk_component,Low Risk,300,0.0955668396
+2024-04-30,2024-05-31,short_reversal_component,Short Reversal,300,-0.0663458557
+2024-04-30,2024-05-31,turnover_stability_component,Turnover Stability,300,0.0972753031
+2024-04-30,2024-05-31,value_component,Value,300,0.0979206436
+2024-05-31,2024-06-30,long_momentum_component,12-1 Momentum,300,0.3110679008
+2024-05-31,2024-06-30,low_risk_component,Low Risk,300,0.1801375571
+2024-05-31,2024-06-30,short_reversal_component,Short Reversal,300,-0.1992857698
+2024-05-31,2024-06-30,turnover_stability_component,Turnover Stability,300,0.0140477116
+2024-05-31,2024-06-30,value_component,Value,300,0.0142192691
+2024-06-30,2024-07-31,long_momentum_component,12-1 Momentum,300,-0.2491507960
+2024-06-30,2024-07-31,low_risk_component,Low Risk,300,0.0651816131
+2024-06-30,2024-07-31,short_reversal_component,Short Reversal,300,0.1361379571
+2024-06-30,2024-07-31,turnover_stability_component,Turnover Stability,300,0.0401982244
+2024-06-30,2024-07-31,value_component,Value,300,-0.1112403471
+2024-07-31,2024-08-31,long_momentum_component,12-1 Momentum,300,0.2030649229
+2024-07-31,2024-08-31,low_risk_component,Low Risk,300,0.1097869976
+2024-07-31,2024-08-31,short_reversal_component,Short Reversal,300,0.1287805420
+2024-07-31,2024-08-31,turnover_stability_component,Turnover Stability,300,0.1131937022
+2024-07-31,2024-08-31,value_component,Value,300,-0.0104672274
+2024-08-31,2024-09-30,long_momentum_component,12-1 Momentum,298,-0.3492353670
+2024-08-31,2024-09-30,low_risk_component,Low Risk,298,-0.1022745694
+2024-08-31,2024-09-30,short_reversal_component,Short Reversal,298,-0.0995175431
+2024-08-31,2024-09-30,turnover_stability_component,Turnover Stability,298,-0.0024729348
+2024-08-31,2024-09-30,value_component,Value,298,0.0301828639
+2024-09-30,2024-10-31,long_momentum_component,12-1 Momentum,298,-0.1862524081
+2024-09-30,2024-10-31,low_risk_component,Low Risk,298,0.0001054291
+2024-09-30,2024-10-31,short_reversal_component,Short Reversal,298,-0.1121452863
+2024-09-30,2024-10-31,turnover_stability_component,Turnover Stability,298,-0.0967449272
+2024-09-30,2024-10-31,value_component,Value,298,0.0228318619
+2024-10-31,2024-11-30,long_momentum_component,12-1 Momentum,300,-0.0919495785
+2024-10-31,2024-11-30,low_risk_component,Low Risk,300,0.0364360009
+2024-10-31,2024-11-30,short_reversal_component,Short Reversal,300,-0.0300368116
+2024-10-31,2024-11-30,turnover_stability_component,Turnover Stability,300,0.0347550915
+2024-10-31,2024-11-30,value_component,Value,300,-0.0241982958
+2024-11-30,2024-12-31,long_momentum_component,12-1 Momentum,300,0.3385344282
+2024-11-30,2024-12-31,low_risk_component,Low Risk,300,0.3598337759
+2024-11-30,2024-12-31,short_reversal_component,Short Reversal,300,0.1092678808
+2024-11-30,2024-12-31,turnover_stability_component,Turnover Stability,300,0.1403415594
+2024-11-30,2024-12-31,value_component,Value,300,0.1484892054
+2024-12-31,2025-01-31,long_momentum_component,12-1 Momentum,300,0.0897129968
+2024-12-31,2025-01-31,low_risk_component,Low Risk,300,0.0860187335
+2024-12-31,2025-01-31,short_reversal_component,Short Reversal,300,-0.0451880576
+2024-12-31,2025-01-31,turnover_stability_component,Turnover Stability,300,0.0551952799
+2024-12-31,2025-01-31,value_component,Value,300,-0.0201793353
+2025-01-31,2025-02-28,long_momentum_component,12-1 Momentum,299,-0.2534796677
+2025-01-31,2025-02-28,low_risk_component,Low Risk,299,-0.0175915441
+2025-01-31,2025-02-28,short_reversal_component,Short Reversal,299,0.1713723469
+2025-01-31,2025-02-28,turnover_stability_component,Turnover Stability,299,0.0468627545
+2025-01-31,2025-02-28,value_component,Value,299,0.0192788257
+2025-02-28,2025-03-31,long_momentum_component,12-1 Momentum,299,0.0487957622
+2025-02-28,2025-03-31,low_risk_component,Low Risk,299,0.2423680725
+2025-02-28,2025-03-31,short_reversal_component,Short Reversal,299,0.0025440506
+2025-02-28,2025-03-31,turnover_stability_component,Turnover Stability,299,0.0933707436
+2025-02-28,2025-03-31,value_component,Value,299,0.0314471056
+2025-03-31,2025-04-30,long_momentum_component,12-1 Momentum,300,0.1690196746
+2025-03-31,2025-04-30,low_risk_component,Low Risk,300,0.0314890200
+2025-03-31,2025-04-30,short_reversal_component,Short Reversal,300,-0.0837133839
+2025-03-31,2025-04-30,turnover_stability_component,Turnover Stability,300,-0.0079594227
+2025-03-31,2025-04-30,value_component,Value,300,-0.1788806741
+2025-04-30,2025-05-31,long_momentum_component,12-1 Momentum,300,0.0050778359
+2025-04-30,2025-05-31,low_risk_component,Low Risk,300,-0.1157008668
+2025-04-30,2025-05-31,short_reversal_component,Short Reversal,300,-0.1248583039
+2025-04-30,2025-05-31,turnover_stability_component,Turnover Stability,300,0.0324168118
+2025-04-30,2025-05-31,value_component,Value,300,-0.0100752253
+2025-05-31,2025-06-30,long_momentum_component,12-1 Momentum,300,0.0300994489
+2025-05-31,2025-06-30,low_risk_component,Low Risk,300,-0.1757686392
+2025-05-31,2025-06-30,short_reversal_component,Short Reversal,300,-0.0301510084
+2025-05-31,2025-06-30,turnover_stability_component,Turnover Stability,300,-0.1510741398
+2025-05-31,2025-06-30,value_component,Value,300,0.0018880212
+2025-06-30,2025-07-31,long_momentum_component,12-1 Momentum,299,-0.2268249871
+2025-06-30,2025-07-31,low_risk_component,Low Risk,299,-0.0694884514
+2025-06-30,2025-07-31,short_reversal_component,Short Reversal,299,-0.1890718502
+2025-06-30,2025-07-31,turnover_stability_component,Turnover Stability,299,-0.0405176090
+2025-06-30,2025-07-31,value_component,Value,299,0.1798626293
+2025-07-31,2025-08-31,long_momentum_component,12-1 Momentum,299,0.1149443502
+2025-07-31,2025-08-31,low_risk_component,Low Risk,299,-0.0952502696
+2025-07-31,2025-08-31,short_reversal_component,Short Reversal,299,0.0294772647
+2025-07-31,2025-08-31,turnover_stability_component,Turnover Stability,299,0.0248333649
+2025-07-31,2025-08-31,value_component,Value,299,-0.1222016590
+2025-08-31,2025-09-30,long_momentum_component,12-1 Momentum,299,-0.0105515028
+2025-08-31,2025-09-30,low_risk_component,Low Risk,299,-0.0086669211
+2025-08-31,2025-09-30,short_reversal_component,Short Reversal,299,-0.0602446634
+2025-08-31,2025-09-30,turnover_stability_component,Turnover Stability,299,-0.0177549325
+2025-08-31,2025-09-30,value_component,Value,299,-0.0838769051
+2025-09-30,2025-10-31,long_momentum_component,12-1 Momentum,300,-0.0651625402
+2025-09-30,2025-10-31,low_risk_component,Low Risk,300,0.0725310880
+2025-09-30,2025-10-31,short_reversal_component,Short Reversal,300,0.1476664372
+2025-09-30,2025-10-31,turnover_stability_component,Turnover Stability,300,0.0446873370
+2025-09-30,2025-10-31,value_component,Value,300,0.1478853294
+2025-10-31,2025-11-30,long_momentum_component,12-1 Momentum,300,-0.0652456138
+2025-10-31,2025-11-30,low_risk_component,Low Risk,300,0.1849864998
+2025-10-31,2025-11-30,short_reversal_component,Short Reversal,300,-0.0321910243
+2025-10-31,2025-11-30,turnover_stability_component,Turnover Stability,300,0.0679074212
+2025-10-31,2025-11-30,value_component,Value,300,0.1473003033
+2025-11-30,2025-12-31,long_momentum_component,12-1 Momentum,300,0.0818369093
+2025-11-30,2025-12-31,low_risk_component,Low Risk,300,0.0276256403
+2025-11-30,2025-12-31,short_reversal_component,Short Reversal,300,-0.0285949876
+2025-11-30,2025-12-31,turnover_stability_component,Turnover Stability,300,0.1220844676
+2025-11-30,2025-12-31,value_component,Value,300,-0.0077591973
+2025-12-31,2026-01-31,long_momentum_component,12-1 Momentum,299,-0.0036338170
+2025-12-31,2026-01-31,low_risk_component,Low Risk,299,0.0691251253
+2025-12-31,2026-01-31,short_reversal_component,Short Reversal,299,-0.0051264900
+2025-12-31,2026-01-31,turnover_stability_component,Turnover Stability,299,0.0186947753
+2025-12-31,2026-01-31,value_component,Value,299,0.0168517170
+2026-01-31,2026-02-28,long_momentum_component,12-1 Momentum,300,0.0528676985
+2026-01-31,2026-02-28,low_risk_component,Low Risk,300,0.0387528750
+2026-01-31,2026-02-28,short_reversal_component,Short Reversal,300,0.0835753823
+2026-01-31,2026-02-28,turnover_stability_component,Turnover Stability,300,-0.0083827598
+2026-01-31,2026-02-28,value_component,Value,300,0.0870787453
+2026-02-28,2026-03-31,long_momentum_component,12-1 Momentum,300,0.0176048642
+2026-02-28,2026-03-31,low_risk_component,Low Risk,300,0.1384386647
+2026-02-28,2026-03-31,short_reversal_component,Short Reversal,300,0.0094234391
+2026-02-28,2026-03-31,turnover_stability_component,Turnover Stability,300,0.0685358802
+2026-02-28,2026-03-31,value_component,Value,300,0.0516732466
+2026-03-31,2026-04-30,long_momentum_component,12-1 Momentum,300,0.0926197369
+2026-03-31,2026-04-30,low_risk_component,Low Risk,300,-0.1495515059
+2026-03-31,2026-04-30,short_reversal_component,Short Reversal,300,0.0864325543
+2026-03-31,2026-04-30,turnover_stability_component,Turnover Stability,300,-0.0836094106
+2026-03-31,2026-04-30,value_component,Value,300,-0.1430656532
+2026-04-30,2026-05-31,long_momentum_component,12-1 Momentum,300,0.0451431683
+2026-04-30,2026-05-31,low_risk_component,Low Risk,300,-0.0850702786
+2026-04-30,2026-05-31,short_reversal_component,Short Reversal,300,0.0081578684
+2026-04-30,2026-05-31,turnover_stability_component,Turnover Stability,300,0.0437284859
+2026-04-30,2026-05-31,value_component,Value,300,-0.0162721808
+2026-05-31,2026-06-30,long_momentum_component,12-1 Momentum,300,-0.0016773522
+2026-05-31,2026-06-30,low_risk_component,Low Risk,300,-0.1281836465
+2026-05-31,2026-06-30,short_reversal_component,Short Reversal,300,0.0902721141
+2026-05-31,2026-06-30,turnover_stability_component,Turnover Stability,300,-0.1216155735
+2026-05-31,2026-06-30,value_component,Value,300,-0.1016540184
+2026-06-30,2026-07-31,long_momentum_component,12-1 Momentum,300,-0.3010415671
+2026-06-30,2026-07-31,low_risk_component,Low Risk,300,0.3534385938
+2026-06-30,2026-07-31,short_reversal_component,Short Reversal,300,0.2321825798
+2026-06-30,2026-07-31,turnover_stability_component,Turnover Stability,300,0.3092469916
+2026-06-30,2026-07-31,value_component,Value,300,0.3795011056
+2026-07-31,2026-08-31,long_momentum_component,12-1 Momentum,300,0.2604115891
+2026-07-31,2026-08-31,low_risk_component,Low Risk,300,-0.2775904485
+2026-07-31,2026-08-31,short_reversal_component,Short Reversal,300,0.2434631766
+2026-07-31,2026-08-31,turnover_stability_component,Turnover Stability,300,-0.0970810895
+2026-07-31,2026-08-31,value_component,Value,300,-0.1266576436
+2026-08-31,2026-09-08,long_momentum_component,12-1 Momentum,300,-0.0071791989
+2026-08-31,2026-09-08,low_risk_component,Low Risk,300,0.1573283673
+2026-08-31,2026-09-08,short_reversal_component,Short Reversal,300,-0.0260749883
+2026-08-31,2026-09-08,turnover_stability_component,Turnover Stability,300,0.0357537703
+2026-08-31,2026-09-08,value_component,Value,300,0.0934478088
