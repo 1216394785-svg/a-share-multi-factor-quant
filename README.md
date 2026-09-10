@@ -1,240 +1,297 @@
-# A-Share Multi-Factor Quantitative Research System
+# A-Share Multi-Factor Quantitative Research System V2
 
-A modular quantitative research and backtesting framework for A-share equities, developed with Python, Pandas, SQLite and Matplotlib.
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Market](https://img.shields.io/badge/Market-China%20A--Shares-red)
+![Universe](https://img.shields.io/badge/Universe-CSI%20300-orange)
+![Research](https://img.shields.io/badge/Status-V2%20Complete-brightgreen)
+![Tests](https://img.shields.io/badge/Tests-27%20Passed-success)
 
-The project covers the complete research process from market data collection and factor construction to portfolio backtesting, out-of-sample validation, risk analysis and automated reporting.
+An end-to-end quantitative equity research framework for the China A-share market, covering point-in-time universe reconstruction, market-data validation, factor engineering, industry and size neutralization, walk-forward model training, constrained portfolio construction, realistic event-driven backtesting and professional reporting.
 
-## Project Overview
+> This project is intended for education, research and portfolio demonstration. It is not investment advice.
 
-This project investigates whether price- and volume-based factors can generate stable excess returns within a selected A-share stock universe.
+## Project Highlights
 
-The framework:
+- Reconstructs 94 historical CSI 300 constituent snapshots.
+- Retains 520 current and former index constituents to reduce survivorship bias.
+- Includes inactive and delisted stocks instead of using only the current universe.
+- Processes more than 924,000 daily market observations.
+- Applies point-in-time tradability, suspension, ST and history-length filters.
+- Builds 17 alpha factors across six factor categories.
+- Performs MAD winsorization, cross-sectional standardization and neutralization.
+- Evaluates factors using forward returns, rank IC, ICIR and quantile portfolios.
+- Trains factor weights using a rolling walk-forward process.
+- Constructs a 20-stock portfolio with rank buffers and industry limits.
+- Executes trades at the next available open using unadjusted prices.
+- Models board lots, commission, minimum commission, stamp duty, transfer fees and slippage.
+- Produces risk diagnostics, professional charts, HTML research output and a PDF report.
+- Includes automated tests for core data, model, portfolio and execution invariants.
 
-- downloads and cleans daily market data;
-- stores prices, factors and results in SQLite;
-- constructs six quantitative factors;
-- performs cross-sectional factor standardisation;
-- generates monthly stock rankings;
-- selects the top five stocks;
-- simulates transaction costs and monthly rebalancing;
-- compares the strategy with the CSI 300 Index;
-- evaluates individual factors using monthly Rank IC;
-- separates training and testing periods;
-- performs a true out-of-sample portfolio backtest;
-- calculates performance and risk metrics;
-- produces CSV reports and visualisations;
-- runs automated tests to detect logical errors.
+## V2 Backtest Results
 
-## Technology Stack
+Event-driven backtest period: **7 February 2022 to 8 September 2026**
 
-- Python
-- Pandas
-- NumPy
-- SQLite
-- Matplotlib
-- yfinance
-- Pytest
-- SciPy
-- OpenPyXL
+| Metric | Portfolio After Costs | Portfolio Before Costs | CSI 300 |
+|---|---:|---:|---:|
+| Final value | ¥1,251,689.57 | ¥1,317,757.99 | ¥982,788.04 |
+| Total return | 25.17% | 31.78% | -1.72% |
+| Annualized return | 5.02% | 6.21% | -0.38% |
+| Annualized volatility | 17.74% | 17.74% | 18.15% |
+| Sharpe ratio | 0.170 | 0.237 | -0.131 |
+| Maximum drawdown | -24.18% | -23.95% | -32.09% |
+| Explicit cost / initial capital | 4.29% | 0.00% | 0.00% |
 
-## Project Structure
+The after-cost portfolio outperformed the CSI 300 by approximately **26.89 percentage points** over the event-backtest period. The strategy also experienced a smaller maximum drawdown than the benchmark, although its absolute Sharpe ratio remains modest.
+
+## Performance Dashboard
+
+![V2 Event Backtest Dashboard](reports/charts/v2_event_backtest_dashboard.png)
+
+## Risk Comparison
+
+![V2 Risk Comparison](reports/charts/v2_risk_comparison.png)
+
+## Research Pipeline
+
+```mermaid
+flowchart TD
+    A[Historical CSI 300 Universe] --> B[Market Data and Quality Checks]
+    B --> C[Point-in-Time Tradability Filters]
+    C --> D[Raw Factor Library]
+    D --> E[Winsorization and Standardization]
+    E --> F[Industry and Size Neutralization]
+    F --> G[Factor IC and Quantile Evaluation]
+    G --> H[Walk-Forward Factor Weights]
+    H --> I[Constrained Portfolio Construction]
+    I --> J[Next-Open Event Execution]
+    J --> K[Risk Analysis and Research Report]
+```
+
+## Historical Universe and Data
+
+| Item | Result |
+|---|---:|
+| Historical CSI 300 snapshots | 94 |
+| Current constituents | 300 |
+| Unique historical constituents | 520 |
+| Former constituents | 220 |
+| Inactive or delisted stocks | 11 |
+| Daily market-data rows | 924,128 |
+| First market date | 2019-01-02 |
+| Latest market date | 2026-09-08 |
+| Critical data-quality failures | 0 |
+
+The framework keeps former index constituents and inactive securities in the research database. This reduces the survivorship bias that would arise from backtesting the current CSI 300 constituents across the entire historical period.
+
+## Point-in-Time Tradability
+
+Each monthly index snapshot is combined with information available at that time. Securities may be excluded because of:
+
+- Insufficient trading history
+- Missing or invalid prices
+- Suspension or stale prices
+- ST status
+- Absence from the historical index snapshot
+
+The tradability module produced:
+
+| Item | Result |
+|---|---:|
+| Membership observations | 28,200 |
+| Eligible observations | 26,084 |
+| First usable snapshot | 2019-07-31 |
+| Average eligible stocks | 277.5 |
+| Latest eligible stocks | 300 |
+
+## Factor Library
+
+The V2 factor library contains the following categories.
+
+| Category | Example Signals |
+|---|---|
+| Momentum | 20-day, 60-day, 120-day and 12-1 momentum |
+| Reversal | 5-day short-term reversal |
+| Risk | Volatility, downside volatility and drawdown |
+| Trend | Moving-average trend |
+| Liquidity | Trading amount, turnover, turnover stability and Amihud liquidity |
+| Value | Earnings yield, book-to-price, sales-to-price and cash-flow yield |
+| Neutralizer | Log float market capitalization |
+
+### Factor Processing
+
+For each monthly cross-section, the pipeline applies:
+
+1. Missing-value handling
+2. Median absolute deviation winsorization
+3. Factor-direction alignment
+4. Cross-sectional z-score standardization
+5. Industry dummy regression
+6. Log-float-market-cap neutralization
+7. Category-score construction
+
+Post-neutralization diagnostics show approximately zero average size correlation and zero average industry exposure for the processed alpha signals.
+
+## Factor Evaluation
+
+The strongest one-month neutralized signals included:
+
+| Factor | Mean IC | ICIR | Positive IC Rate |
+|---|---:|---:|---:|
+| Turnover Stability | 0.0291 | 0.3275 | 66.28% |
+| 60-Day Downside Volatility | 0.0266 | 0.2027 | 61.63% |
+| 20-Day Volatility | 0.0264 | 0.2241 | 60.47% |
+| 12-1 Momentum | 0.0225 | 0.1529 | 63.75% |
+| Earnings Yield | 0.0196 | 0.1688 | 59.30% |
+
+The 12-1 momentum factor produced the strongest average quintile spread, while short and medium-horizon momentum were less reliable during the sample period.
+
+## Walk-Forward Model
+
+The final model combines five components:
+
+- Turnover Stability
+- Low Risk
+- Short Reversal
+- Value
+- 12-1 Momentum
+
+The training framework uses:
+
+- A maximum 36-month rolling training window
+- A minimum 24-month history requirement
+- Exponentially weighted IC observations
+- A maximum component-weight constraint
+- Weight smoothing between rebalances
+- Strict separation between model-training data and future returns
+
+Reported look-ahead violations: **0**
+
+### Latest Model Weights
+
+| Component | Smoothed Weight |
+|---|---:|
+| Turnover Stability | 30.94% |
+| Low Risk | 22.49% |
+| Short Reversal | 20.58% |
+| Value | 17.74% |
+| 12-1 Momentum | 8.26% |
+
+![Walk-Forward Factor Weights](reports/charts/v2_walk_forward_weights.png)
+
+## Portfolio Construction
+
+The portfolio-construction layer applies the following rules:
+
+- 20 target holdings
+- Approximately 5% target weight per stock
+- Maximum three holdings from the same industry
+- Top-30 entry threshold
+- Top-40 exit threshold
+- Rank-buffer retention to reduce unnecessary turnover
+- Sells processed before buys
+- Total target weight limited to 100%
+
+Portfolio-construction validation results:
+
+| Item | Result |
+|---|---:|
+| Portfolio snapshots | 57 |
+| Target holding observations | 1,140 |
+| Average holdings | 20 |
+| Partial portfolios | 0 |
+| Industry-limit violations | 0 |
+| Maximum total target weight | 100.00% |
+| Average monthly target turnover | 29.82% |
+
+## Event-Driven Execution
+
+The realistic event backtester separates signal formation from execution.
+
+- Signals are formed after the monthly snapshot close.
+- Orders are executed at the next available trading-day open.
+- Execution uses unadjusted prices.
+- Purchases use 100-share board lots.
+- Cash cannot become negative.
+- Suspended or invalid securities cannot be traded.
+- One-price limit-up and limit-down conditions may block execution.
+- Available cash is checked before every buy.
+- Existing holdings are sold before new positions are purchased.
+
+### Transaction-Cost Assumptions
+
+| Cost | Assumption |
+|---|---:|
+| Commission | 0.030% |
+| Minimum commission | ¥5 |
+| Slippage | 0.050% per side |
+| Board lot | 100 shares |
+| Stamp duty | Applied to sells using date-dependent rates |
+| Transfer fee | Date-dependent historical rate |
+
+Execution audit:
+
+| Item | Result |
+|---|---:|
+| Backtest days | 1,116 |
+| Executed trades | 1,121 |
+| Blocked trades | 1 |
+| Small or cash-limited trades skipped | 351 |
+| Negative-cash days | 0 |
+| Final holdings | 20 |
+
+![Execution Costs](reports/charts/v2_execution_costs.png)
+
+## Repository Structure
 
 ```text
-a_share_quant_project
-│
-├── config
+a_share_quant_project/
+├── config/
 │   ├── __init__.py
 │   └── settings.py
-│
-├── data
+├── data/
 │   └── quant_data.db
-│
-├── reports
-│   ├── charts
-│   │   └── backtest_report.png
-│   └── results
-│       ├── annual_returns.csv
-│       ├── backtest_results.csv
-│       ├── factor_ic_summary.csv
-│       ├── factor_validation_summary.csv
-│       ├── latest_factor_ranking.csv
-│       ├── oos_backtest_results.csv
-│       ├── oos_performance_summary.csv
-│       ├── oos_risk_summary.csv
-│       ├── oos_turnover_summary.csv
-│       ├── performance_summary.csv
-│       └── pipeline.log
-│
-├── src
-│   ├── __init__.py
-│   ├── database.py
-│   ├── data_loader.py
-│   ├── factors.py
-│   ├── factor_analysis.py
-│   ├── strategy.py
-│   ├── backtester.py
-│   ├── performance.py
-│   ├── visualization.py
-│   ├── ic_analysis.py
-│   ├── factor_validation.py
-│   ├── oos_backtest.py
-│   └── risk_analysis.py
-│
-├── tests
+├── reports/
+│   ├── charts/
+│   ├── results/
+│   └── a_share_multi_factor_research_report_v2.html
+├── src/
+│   ├── universe.py
+│   ├── historical_universe.py
+│   ├── baostock_loader.py
+│   ├── execution_price_loader_v2.py
+│   ├── data_quality.py
+│   ├── anomaly_review.py
+│   ├── stock_master.py
+│   ├── tradability.py
+│   ├── factors_v2.py
+│   ├── factor_processing_v2.py
+│   ├── factor_evaluation_v2.py
+│   ├── walk_forward_model_v2.py
+│   ├── portfolio_construction_v2.py
+│   ├── event_backtester_v2.py
+│   ├── performance_diagnostics_v2.py
+│   ├── visualization_v2.py
+│   └── report_generator_v2.py
+├── tests/
+│   ├── test_quant_logic.py
 │   ├── test_settings.py
-│   └── test_quant_logic.py
-│
-├── .gitignore
-├── download_data.py
+│   └── test_v2_pipeline.py
+├── A-Share Multi-Factor Research Report V2.pdf
 ├── main.py
 ├── requirements.txt
 └── README.md
 ```
 
-## Factor Library
-
-The first version of the model includes six price- and volume-based factors.
-
-| Factor | Definition | Original Direction |
-|---|---|---|
-| 20-Day Momentum | Price return over the previous 20 trading days | Higher is preferred |
-| 60-Day Momentum | Price return over the previous 60 trading days | Higher is preferred |
-| 5-Day Reversal | Negative of the previous five-day return | Higher is preferred |
-| 20-Day Volatility | Annualised volatility over 20 trading days | Lower is preferred |
-| MA Trend | Relative difference between MA20 and MA60 | Higher is preferred |
-| Volume Ratio | Current volume relative to its 20-day average | Higher is preferred |
-
-Raw factor values are winsorised and transformed into daily cross-sectional Z-scores.
-
-The original composite score is calculated as:
-
-```text
-20-Day Momentum: 20%
-60-Day Momentum: 20%
-5-Day Reversal: 15%
-Low Volatility: 20%
-MA Trend: 15%
-Volume Ratio: 10%
-```
-
-## Portfolio Construction
-
-The portfolio rules are:
-
-- long-only portfolio;
-- monthly rebalancing;
-- signals calculated at month-end;
-- execution delayed until the next trading day;
-- top five stocks selected;
-- equal weighting;
-- maximum individual weight of 20%;
-- initial capital of CNY 100,000;
-- transaction commissions, stamp duty and slippage included;
-- CSI 300 used as the benchmark.
-
-## Avoiding Look-Ahead Bias
-
-The framework applies several controls against future-data leakage:
-
-1. Factor values only use current and historical prices.
-2. Month-end signals are executed on the following trading day.
-3. Factor direction and weight are estimated only with training data.
-4. Trained weights are frozen before out-of-sample testing.
-5. Testing results are not used to modify the tested model.
-6. Automated tests confirm that training and testing dates do not overlap.
-
-## Factor IC Analysis
-
-Monthly Spearman Rank IC is used to test whether higher factor scores are associated with higher future 20-day returns.
-
-The initial composite factor produced:
-
-```text
-Mean monthly Rank IC: -0.0312
-Positive IC rate: 43.48%
-```
-
-The strongest original factor was 20-day momentum, although its predictive ability remained weak:
-
-```text
-Mean IC: 0.0124
-Positive IC rate: 52.17%
-```
-
-The 60-day momentum and MA trend factors showed negative IC values in the research sample.
-
-## Training and Testing
-
-The available monthly observations were divided chronologically:
-
-```text
-Training period: 2020-04-30 to 2024-09-30
-Testing period: 2024-10-31 to 2026-06-30
-```
-
-Only the training period was used to determine factor direction and factor weight.
-
-The trained composite factor produced:
-
-| Period | Mean IC | Positive IC Rate | t-Statistic |
-|---|---:|---:|---:|
-| Training | 0.0897 | 54.17% | 1.7970 |
-| Testing | 0.0316 | 61.90% | 0.3739 |
-
-The out-of-sample IC remained positive, but the low t-statistic indicates that predictive stability was limited.
-
-## True Out-of-Sample Backtest
-
-The final comparison used 450 out-of-sample trading days.
-
-| Method | Total Return | Annual Return | Annual Volatility | Sharpe Ratio | Maximum Drawdown |
-|---|---:|---:|---:|---:|---:|
-| Trained Factor | 7.53% | 4.15% | 18.87% | 0.20 | -21.34% |
-| Original Factor | -1.08% | -0.61% | 16.60% | -0.07 | -20.95% |
-| CSI 300 Benchmark | 16.40% | 8.88% | 16.33% | 0.48 | -13.42% |
-
-The trained factor model improved total return by 8.61 percentage points relative to the original model.
-
-However, it underperformed the CSI 300 by 8.87 percentage points and experienced higher volatility and a larger maximum drawdown.
-
-## Out-of-Sample Risk Results
-
-| Risk Metric | Trained Factor | Original Factor | CSI 300 |
-|---|---:|---:|---:|
-| 95% Historical VaR | 1.75% | 1.41% | 1.71% |
-| 95% Historical CVaR | 2.47% | 2.26% | 2.55% |
-| Worst Daily Return | -5.17% | -6.32% | -7.05% |
-| Maximum Loss Streak | 10 days | 10 days | 5 days |
-| Monthly Win Rate | 52.17% | 43.48% | 60.87% |
-| Annualised Turnover | 594.29% | 525.71% | 0.00% |
-
-The trained strategy reduced the worst single-day loss relative to the benchmark but suffered from high turnover and weak risk-adjusted performance.
-
-## Research Conclusion
-
-The trained factor model improved upon the original factor specification, suggesting that factor direction and weighting affected portfolio performance.
-
-However, the model did not outperform the CSI 300 during the true out-of-sample period. Its Sharpe ratio was lower, its maximum drawdown was larger and its annualised turnover was high.
-
-The evidence suggests that the current factors contain limited cross-sectional information, but the signal is not sufficiently stable to generate reliable portfolio-level excess returns.
-
-The strategy should therefore be treated as a research prototype rather than a live trading model.
-
-## Key Limitations
-
-- The stock universe contains only 12 large A-share companies.
-- The selected universe may contain survivorship bias.
-- Sector exposure is not neutralised.
-- Fundamental factors are not included.
-- Transaction costs use simplified assumptions.
-- Price limits, suspensions and minimum commissions are not fully modelled.
-- Portfolio weights are target weights rather than share-level holdings.
-- The testing period contains only 21 monthly IC observations.
-- Results do not guarantee future performance.
-
 ## Installation
 
-Create and activate a virtual environment:
+Clone the repository:
+
+```bash
+git clone https://github.com/1216394785-svg/a-share-multi-factor-quant.git
+cd a-share-multi-factor-quant
+```
+
+Create and activate a virtual environment on Windows:
 
 ```powershell
 python -m venv .venv
@@ -244,56 +301,86 @@ python -m venv .venv
 Install dependencies:
 
 ```powershell
-python -m pip install -r requirements.txt
+python -m pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
-## Running the Project
+## Running the V2 Pipeline
 
-Run the full pipeline with existing market data:
+Run the modules from the project root:
 
 ```powershell
-python main.py
+python -m src.historical_universe
+python -m src.baostock_loader --resume
+python -m src.data_quality
+python -m src.anomaly_review
+python -m src.stock_master
+python -m src.tradability
+python -m src.factors_v2
+python -m src.factor_processing_v2
+python -m src.factor_evaluation_v2
+python -m src.walk_forward_model_v2
+python -m src.portfolio_construction_v2
+python -m src.execution_price_loader_v2 --resume
+python -m src.event_backtester_v2
+python -m src.performance_diagnostics_v2
+python -m src.visualization_v2
+python -m src.report_generator_v2
 ```
 
-Run without opening charts:
+Some data-download steps may take time and depend on the availability of the BaoStock service. Resume mode can safely continue an interrupted download.
+
+## Automated Tests
+
+Run all tests:
 
 ```powershell
-python main.py --skip-charts
+python -m pytest -v
 ```
 
-Refresh market data and rerun everything:
+The test suite checks:
 
-```powershell
-python main.py --download
-```
+- Duplicate stock-date records
+- Signal and execution ordering
+- Point-in-time universe coverage
+- Walk-forward weight constraints
+- Portfolio weight totals
+- Industry concentration limits
+- Board-lot compliance
+- Non-negative cash
+- Transaction-cost impact
+- Drawdown validity
+- Research-report generation
 
-Run automated tests:
+Current result: **27 tests passed**
 
-```powershell
-python -m pytest -v tests
-```
+## Research Reports
 
-## Automated Testing
+- [V2 HTML Research Report](reports/a_share_multi_factor_research_report_v2.html)
+- [V2 PDF Research Report](A-Share%20Multi-Factor%20Research%20Report%20V2.pdf)
 
-The project includes automated checks for:
+## Main Limitations
 
-- duplicate price observations;
-- invalid signal and execution dates;
-- duplicate rebalance orders;
-- portfolio weights above 100%;
-- incorrect trained factor weights;
-- overlap between training and testing periods;
-- missing out-of-sample results;
-- negative portfolio values;
-- missing daily returns;
-- unreasonable single-day returns.
+- Historical results do not guarantee future performance.
+- Daily data cannot reproduce full intraday market microstructure.
+- Market impact is simplified and may be larger for institutional capital.
+- Historical constituent data may be subject to vendor limitations.
+- Factor performance may change across market regimes.
+- The model does not currently optimize factor exposure using a full covariance matrix.
+- The current framework does not connect to a live brokerage account.
 
-Current test result:
+## Potential Future Improvements
 
-```text
-15 passed
-```
+- Barra-style risk-model integration
+- Factor-covariance estimation
+- Volatility-targeted position sizing
+- Transaction-cost-aware portfolio optimization
+- Alternative rebalance frequencies
+- Market-regime detection
+- Industry-relative factor models
+- Paper-trading and live-data interfaces
+- Continuous integration with automated GitHub tests
 
 ## Disclaimer
 
-This project is for educational and quantitative research purposes only. It does not constitute financial advice, an investment recommendation or a live trading system.
+This repository is provided solely for educational and quantitative research purposes. Nothing in this repository constitutes investment advice, a trading recommendation or an offer to buy or sell any financial instrument. Users are responsible for independently verifying all data, assumptions and results.
