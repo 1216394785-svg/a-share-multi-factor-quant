@@ -1,0 +1,19 @@
+﻿factor_column,factor_name,category,direction,role,formula
+momentum_20,20-Day Momentum,Momentum,1,alpha,close / close.shift(20) - 1
+momentum_60,60-Day Momentum,Momentum,1,alpha,close / close.shift(60) - 1
+momentum_120,120-Day Momentum,Momentum,1,alpha,close / close.shift(120) - 1
+momentum_12_1,12-1 Momentum,Momentum,1,alpha,close.shift(20) / close.shift(252) - 1
+reversal_5_score,5-Day Reversal,Reversal,1,alpha,-(close / close.shift(5) - 1)
+volatility_20,20-Day Volatility,Risk,-1,alpha,"std(daily return, 20) * sqrt(252)"
+downside_volatility_60,60-Day Downside Volatility,Risk,-1,alpha,"std(min(daily return, 0), 60) * sqrt(252)"
+drawdown_60,60-Day Drawdown,Risk,1,alpha,"close / rolling_max(close, 60) - 1"
+trend_60,60-Day MA Trend,Trend,1,alpha,"close / rolling_mean(close, 60) - 1"
+liquidity_amount_20,20-Day Amount Liquidity,Liquidity,1,alpha,"log(1 + rolling_mean(amount, 20) / 1,000,000)"
+turnover_20,20-Day Turnover,Liquidity,1,alpha,"rolling_mean(turnover_rate, 20)"
+turnover_stability_20,Turnover Stability,Liquidity,1,alpha,"-rolling_std(turnover_rate, 20)"
+amihud_liquidity_score_20,Amihud Liquidity,Liquidity,1,alpha,"-log(1 + rolling_mean(abs(return)/(amount/1e8), 20))"
+value_pe_score,Earnings Yield Style,Value,1,alpha,-log(positive PE TTM)
+value_pb_score,Book-to-Price Style,Value,1,alpha,-log(positive PB MRQ)
+value_ps_score,Sales-to-Price Style,Value,1,alpha,-log(positive PS TTM)
+value_pcf_score,Cash-Flow Yield Style,Value,1,alpha,-log(positive PCF NCF TTM)
+log_float_market_cap,Log Float Market Capitalization,Size,0,neutralizer,"rolling_median(log(volume / turnover_fraction * close), 20)"

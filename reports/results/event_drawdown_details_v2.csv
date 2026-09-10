@@ -1,0 +1,4 @@
+﻿method,maximum_drawdown,maximum_drawdown_percent,peak_date,peak_value,trough_date,trough_value,recovery_date,drawdown_trading_days,drawdown_calendar_days,recovery_trading_days,recovery_calendar_days
+Walk-Forward Portfolio After Costs,-0.24180145533809483,-24.180145533809483,2022-02-10,1035776.23417824,2022-04-26,785324.0333493302,2024-09-30,51,75,591,888
+Walk-Forward Portfolio Before Costs,-0.23948079260645594,-23.948079260645592,2022-02-10,1036580.0,2022-04-26,788338.9999999999,2023-07-31,51,75,307,461
+CSI 300 Benchmark,-0.32089306780018123,-32.08930678001812,2022-02-09,1002907.2471899712,2024-09-13,681081.2639201466,2025-10-09,634,947,254,391

@@ -1,0 +1,19 @@
+﻿factor_column,factor_name,category,direction,role,formula,total_observations,raw_missing_observations,industry_imputed_observations,cross_section_imputed_observations,zero_fallback_observations,winsorized_observations,raw_missing_percent,winsorized_percent,mean_absolute_size_correlation_before,mean_absolute_size_correlation_after,mean_absolute_industry_score_after
+log_float_market_cap,Log Float Market Capitalization,Size,0,neutralizer,"rolling_median(log(volume / turnover_fraction * close), 20)",26084,0,0,0,0,3,0.00000000,0.01150130,,,
+momentum_20,20-Day Momentum,Momentum,1,alpha,close / close.shift(20) - 1,26084,0,0,0,0,228,0.00000000,0.87409906,0.12531441,0.00000000,0.00000000
+momentum_60,60-Day Momentum,Momentum,1,alpha,close / close.shift(60) - 1,26084,0,0,0,0,276,0.00000000,1.05811992,0.17050824,0.00000000,0.00000000
+momentum_120,120-Day Momentum,Momentum,1,alpha,close / close.shift(120) - 1,26084,0,0,0,0,347,0.00000000,1.33031744,0.22845510,0.00000000,0.00000000
+momentum_12_1,12-1 Momentum,Momentum,1,alpha,close.shift(20) / close.shift(252) - 1,26084,1952,152,0,1800,410,7.48351480,1.57184481,0.27514598,0.00000000,0.00000000
+reversal_5_score,5-Day Reversal,Reversal,1,alpha,-(close / close.shift(5) - 1),26084,0,0,0,0,258,0.00000000,0.98911210,0.12295697,0.00000000,0.00000000
+volatility_20,20-Day Volatility,Risk,-1,alpha,"std(daily return, 20) * sqrt(252)",26084,0,0,0,0,47,0.00000000,0.18018709,0.15033022,0.00000000,0.00000000
+downside_volatility_60,60-Day Downside Volatility,Risk,-1,alpha,"std(min(daily return, 0), 60) * sqrt(252)",26084,0,0,0,0,25,0.00000000,0.09584420,0.18160278,0.00000000,0.00000000
+drawdown_60,60-Day Drawdown,Risk,1,alpha,"close / rolling_max(close, 60) - 1",26084,0,0,0,0,28,0.00000000,0.10734550,0.18930053,0.00000000,0.00000000
+trend_60,60-Day MA Trend,Trend,1,alpha,"close / rolling_mean(close, 60) - 1",26084,0,0,0,0,218,0.00000000,0.83576139,0.14932449,0.00000000,0.00000000
+liquidity_amount_20,20-Day Amount Liquidity,Liquidity,1,alpha,"log(1 + rolling_mean(amount, 20) / 1,000,000)",26084,0,0,0,0,0,0.00000000,0.00000000,0.57205681,0.00000000,0.00000000
+turnover_20,20-Day Turnover,Liquidity,1,alpha,"rolling_mean(turnover_rate, 20)",26084,0,0,0,0,899,0.00000000,3.44655728,0.32078077,0.00000000,0.00000000
+turnover_stability_20,Turnover Stability,Liquidity,1,alpha,"-rolling_std(turnover_rate, 20)",26084,0,0,0,0,1038,0.00000000,3.97945100,0.33447790,0.00000000,0.00000000
+amihud_liquidity_score_20,Amihud Liquidity,Liquidity,1,alpha,"-log(1 + rolling_mean(abs(return)/(amount/1e8), 20))",26084,0,0,0,0,468,0.00000000,1.79420334,0.60924519,0.00000000,0.00000000
+value_pe_score,Earnings Yield Style,Value,1,alpha,-log(positive PE TTM),26084,1428,1179,249,0,58,5.47462046,0.22235853,0.16055540,0.00000000,0.00000000
+value_pb_score,Book-to-Price Style,Value,1,alpha,-log(positive PB MRQ),26084,0,0,0,0,0,0.00000000,0.00000000,0.08804863,0.00000000,0.00000000
+value_ps_score,Sales-to-Price Style,Value,1,alpha,-log(positive PS TTM),26084,13,13,0,0,0,0.04983898,0.00000000,0.06049909,0.00000000,0.00000000
+value_pcf_score,Cash-Flow Yield Style,Value,1,alpha,-log(positive PCF NCF TTM),26084,10383,9094,990,299,35,39.80601135,0.13418187,0.08105580,0.00000000,0.00000000

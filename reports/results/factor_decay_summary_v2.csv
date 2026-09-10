@@ -1,0 +1,42 @@
+﻿signal_column,base_factor,factor_name,category,signal_variant,mean_ic_1m,mean_ic_3m,ic_retention_ratio
+turnover_stability_20_zscore,turnover_stability_20,Turnover Stability,Liquidity,standardized,0.0548710667,0.0869625125,1.5848518674
+volatility_20_zscore,volatility_20,20-Day Volatility,Risk,standardized,0.0521832211,0.0897540965,1.7199799987
+downside_volatility_60_zscore,downside_volatility_60,60-Day Downside Volatility,Risk,standardized,0.0453117857,0.0749258111,1.6535612080
+value_pe_score_zscore,value_pe_score,Earnings Yield Style,Value,standardized,0.0374032959,0.0678132345,1.8130283135
+value_pb_score_zscore,value_pb_score,Book-to-Price Style,Value,standardized,0.0366361757,0.0696497809,1.9011203960
+turnover_stability_20_neutral,turnover_stability_20,Turnover Stability,Liquidity,neutralized,0.0290903413,0.0545371958,1.8747526927
+risk_category_score,risk_category_score,Risk Category,Category Composite,category,0.0271890156,0.0509762725,1.8748848137
+reversal_5_score_zscore,reversal_5_score,5-Day Reversal,Reversal,standardized,0.0267719961,0.0116694597,0.4358830633
+downside_volatility_60_neutral,downside_volatility_60,60-Day Downside Volatility,Risk,neutralized,0.0266086779,0.0441444934,1.6590261829
+momentum_12_1_zscore,momentum_12_1,12-1 Momentum,Momentum,standardized,0.0263827450,0.0468979454,1.7775991645
+volatility_20_neutral,volatility_20,20-Day Volatility,Risk,neutralized,0.0263605158,0.0515860954,1.9569455999
+momentum_12_1_neutral,momentum_12_1,12-1 Momentum,Momentum,neutralized,0.0224940733,0.0390191385,1.7346408556
+value_pcf_score_zscore,value_pcf_score,Cash-Flow Yield Style,Value,standardized,0.0220635573,0.0438853363,1.9890417318
+value_pe_score_neutral,value_pe_score,Earnings Yield Style,Value,neutralized,0.0196151559,0.0314327819,1.6024742357
+value_ps_score_zscore,value_ps_score,Sales-to-Price Style,Value,standardized,0.0144895007,0.0316606671,2.1850764719
+drawdown_60_zscore,drawdown_60,60-Day Drawdown,Risk,standardized,0.0144712700,0.0217588509,1.5035895858
+value_category_score,value_category_score,Value Category,Category Composite,category,0.0143069400,0.0267515335,1.8698291564
+value_pb_score_neutral,value_pb_score,Book-to-Price Style,Value,neutralized,0.0140702514,0.0277501860,1.9722594262
+reversal_5_score_neutral,reversal_5_score,5-Day Reversal,Reversal,neutralized,0.0137622660,-0.0008623267,-0.0626587762
+reversal_category_score,reversal_category_score,Reversal Category,Category Composite,category,0.0137622660,-0.0008623267,-0.0626587762
+amihud_liquidity_score_20_zscore,amihud_liquidity_score_20,Amihud Liquidity,Liquidity,standardized,0.0110583945,0.0108537423,0.9814934956
+equal_weight_composite_score,equal_weight_composite_score,Equal-Weight Composite,Composite,composite,0.0106706762,0.0263475758,2.4691570997
+value_ps_score_neutral,value_ps_score,Sales-to-Price Style,Value,neutralized,0.0064811950,0.0136951180,2.1130544417
+drawdown_60_neutral,drawdown_60,60-Day Drawdown,Risk,neutralized,0.0062213245,0.0179385581,2.8833985359
+value_pcf_score_neutral,value_pcf_score,Cash-Flow Yield Style,Value,neutralized,0.0053527337,0.0085388694,1.5952352380
+amihud_liquidity_score_20_neutral,amihud_liquidity_score_20,Amihud Liquidity,Liquidity,neutralized,0.0006332151,-0.0044747307,-7.0666839677
+momentum_120_zscore,momentum_120,120-Day Momentum,Momentum,standardized,-0.0023471788,0.0237928249,-10.1367758573
+liquidity_category_score,liquidity_category_score,Liquidity Category,Category Composite,category,-0.0077203583,-0.0200171683,2.5927771232
+momentum_category_score,momentum_category_score,Momentum Category,Category Composite,category,-0.0107284904,0.0017648723,-0.1645033204
+momentum_120_neutral,momentum_120,120-Day Momentum,Momentum,neutralized,-0.0111144219,0.0057667104,-0.5188493383
+trend_60_neutral,trend_60,60-Day MA Trend,Trend,neutralized,-0.0130719217,-0.0117701460,0.9004143585
+trend_category_score,trend_category_score,Trend Category,Category Composite,category,-0.0130719217,-0.0117701460,0.9004143585
+momentum_20_neutral,momentum_20,20-Day Momentum,Momentum,neutralized,-0.0135212041,-0.0101215671,0.7485699487
+momentum_20_zscore,momentum_20,20-Day Momentum,Momentum,standardized,-0.0168222368,-0.0229492266,1.3642196867
+momentum_60_neutral,momentum_60,60-Day Momentum,Momentum,neutralized,-0.0193039662,-0.0155335371,0.8046811137
+liquidity_amount_20_neutral,liquidity_amount_20,20-Day Amount Liquidity,Liquidity,neutralized,-0.0199427149,-0.0380613277,1.9085329120
+liquidity_amount_20_zscore,liquidity_amount_20,20-Day Amount Liquidity,Liquidity,standardized,-0.0226502269,-0.0365044034,1.6116572950
+trend_60_zscore,trend_60,60-Day MA Trend,Trend,standardized,-0.0236772120,-0.0266980770,1.1275853308
+turnover_20_neutral,turnover_20,20-Day Turnover,Liquidity,neutralized,-0.0279770576,-0.0525855639,1.8795959421
+momentum_60_zscore,momentum_60,60-Day Momentum,Momentum,standardized,-0.0288684820,-0.0208179630,0.7211311965
+turnover_20_zscore,turnover_20,20-Day Turnover,Liquidity,standardized,-0.0512122178,-0.0868555044,1.6959918577
